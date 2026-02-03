@@ -8,11 +8,10 @@
   --v-max: 1180px;
 
   /* PALETTE OTTIMIZZATA (base #E68E25) */
-  --accent: #E68E25;
-  --accent-strong: #B36300; /* Più scuro per leggibilità WCAG su chiaro */
-  --accent-soft: #F7C582;   /* Più morbido per bilanciare l'occhio */
-  --accent-wash: rgba(230, 142, 37, .12);   /* Ridotta opacità per pulizia visiva */
-  --accent-wash-2: rgba(230, 142, 37, .06);
+  --accent: #25e660;
+  --accent-strong: #131b5b; 
+  --accent-soft: #F7C582;  
+  
 
   --card-bg: rgba(255, 255, 255, .96); /* Più opaco per migliorare il contrasto testo */
   --card-border: rgba(0, 0, 0, .08);
@@ -315,7 +314,7 @@ body::before {
 .v-kpiTile__num {
   font-weight: 950;
   letter-spacing: .2px;
-  font-size: 18px;
+  font-size: 35px;
   line-height: 1.15;
   color: var(--accent-strong);
 }
@@ -490,5 +489,6 @@ body::before {
   }
   .v-container { width: min(var(--v-max), calc(100% - 28px)); }
 }
+
 
 
