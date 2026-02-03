@@ -376,13 +376,12 @@ body::before {
 
 /* chart placeholder */
 .v-chart {
-  height: 240px;
+  height: auto;
   border-radius: 14px;
-  border: 1px dashed rgba(0, 0, 0, .18);
+  border: 1px solid rgba(0, 0, 0, .12);
   background: rgba(255, 255, 255, .55);
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+  padding: 8px;
+  display: block;
 }
 
 .v-chart__hint {
@@ -394,9 +393,10 @@ body::before {
 
 .v-chart img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
+  border-radius: 10px;
 }
 
 /* callout finale */
