@@ -474,6 +474,7 @@ body::before {
   place-items: center;
   font-size: 22px;
   line-height: 1;
+  display: none;
 }
 
 .v-backtotop:hover { filter: brightness(.95); }
@@ -489,4 +490,5 @@ body::before {
   }
   .v-container { width: min(var(--v-max), calc(100% - 28px)); }
 }
+
 
