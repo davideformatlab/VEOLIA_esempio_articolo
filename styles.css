@@ -234,7 +234,7 @@ body::before {
 }
 
 .v-article p {
-  margin: 0 0 22px;
+  margin: 0 0 30px;
   line-height: 1.7;
   color: #1f1f1f;
 }
@@ -251,7 +251,7 @@ body::before {
 
 /* KPI BOX (sfumati) */
 .v-kpiBox {
-  margin: 28px 0 28px;
+  margin: 40px 0;
   border-radius: 18px;
   padding: 16px 16px 14px;
   border: 1px solid rgba(0, 0, 0, .08);
@@ -350,17 +350,14 @@ body::before {
 
 /* FIGURE (grafico) */
 .v-figure {
-  margin: 20px 0 16px;
-  border-radius: 18px;
-  padding: 16px;
-  border: 1px solid rgba(0, 0, 0, .08);
-  background: 
-    radial-gradient(900px 260px at 20% 10%, rgba(230, 142, 37, .15), transparent 60%), 
-    linear-gradient(135deg, rgba(255, 255, 255, .90), rgba(255, 255, 255, .75));
-  box-shadow: var(--shadow);
+  margin: 36px 0 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.v-figure__head { margin-bottom: 10px; }
+.v-figure__head { margin-bottom: 16px; }
 
 .v-figure__title {
   margin: 0 0 6px;
@@ -377,10 +374,10 @@ body::before {
 /* chart placeholder */
 .v-chart {
   height: auto;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, .12);
-  background: rgba(255, 255, 255, .55);
-  padding: 8px;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
   display: block;
 }
 
@@ -396,12 +393,14 @@ body::before {
   height: auto;
   object-fit: contain;
   display: block;
-  border-radius: 10px;
+  border-radius: 14px;
+  border: 8px solid rgba(255, 255, 255, .95);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .28);
 }
 
 /* callout finale */
 .v-callout {
-  margin-top: 18px;
+  margin-top: 32px;
   padding: 18px;
   border-radius: 18px;
   border: 1px solid rgba(0, 0, 0, .08);
