@@ -420,6 +420,11 @@ body::before {
   box-shadow: 0 18px 40px rgba(0, 0, 0, .28);
 }
 
+.v-chart--reduced img {
+  width: 70%;
+  margin: 0 auto;
+}
+
 /* callout finale */
 .v-callout {
   margin-top: 32px;
