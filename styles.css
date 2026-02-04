@@ -332,15 +332,15 @@ body::before {
 /* Titoli dei numeri con accent-strong per leggibilità */
 .v-kpiTile__num {
   font-weight: 950;
-  letter-spacing: .2px;
-  font-size: 35px;
-  line-height: 1.15;
+  letter-spacing: .3px;
+  font-size: 46px;
+  line-height: 1.05;
   color: var(--accent-strong);
 }
 
 .v-kpiTile__label {
   margin-top: 6px;
-  font-size: 12.8px;
+  font-size: 13.5px;
   color: rgba(0, 0, 0, .72);
   line-height: 1.3;
 }
@@ -527,6 +527,7 @@ body::before {
   .v-figure__subtitle {
     max-width: 100%;
   }
+  .v-kpiTile__num { font-size: 38px; }
 }
 
 
