@@ -19,7 +19,7 @@
 }
 
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html, body { min-height: 100%; }
 
 body {
   margin: 0;
@@ -27,7 +27,8 @@ body {
   color: var(--v-text);
   min-height: 100%;
   /* SFONDO */
-  background: url("https://www.davidefrigoli.it/wp-content/uploads/2026/02/teal-orange-black-white-glowing-color-gradient-bac-2026-01-06-09-50-52-utc-scaled.jpg") center / cover no-repeat fixed;
+  background: url("https://www.davidefrigoli.it/wp-content/uploads/2026/02/teal-orange-black-white-glowing-color-gradient-bac-2026-01-06-09-50-52-utc-scaled.jpg") center top / cover no-repeat fixed;
+  background-color: #111;
   position: relative;
 }
 
@@ -51,6 +52,12 @@ body::before {
   z-index: 1;
 }
 
+
+@media (max-width: 860px) {
+  body {
+    background-attachment: scroll;
+  }
+}
 /* HEADER */
 .v-header { position: sticky; top: 0; z-index: 50; }
 
@@ -211,15 +218,50 @@ body::before {
   margin: 16px 0 18px;
   font-size: 42px;
   line-height: 1.05;
+  color: #9ddcff;
   text-shadow: 0 8px 24px rgba(0, 0, 0, .35);
 }
 
 .v-subtitle {
-  margin: 0 0 26px;
+  margin: 0 0 56px;
   max-width: 980px;
   font-size: 18px;
   opacity: .95;
   line-height: 1.5;
+}
+
+/* Fade-in animations */
+@keyframes v-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.v-hero__badge,
+.v-title,
+.v-subtitle,
+.v-article {
+  opacity: 0;
+  animation: v-fade-in-up .65s ease-out forwards;
+}
+
+.v-title { animation-delay: .1s; }
+.v-subtitle { animation-delay: .2s; }
+.v-article { animation-delay: .3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .v-hero__badge,
+  .v-title,
+  .v-subtitle,
+  .v-article {
+    opacity: 1;
+    animation: none;
+  }
 }
 
 /* ARTICLE CARD */
