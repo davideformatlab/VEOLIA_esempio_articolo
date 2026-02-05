@@ -218,12 +218,12 @@ body::before {
   margin: 16px 0 18px;
   font-size: 42px;
   line-height: 1.05;
-  color: #9ddcff;
+  color: #ffd36d;
   text-shadow: 0 8px 24px rgba(0, 0, 0, .35);
 }
 
 .v-subtitle {
-  margin: 0 0 56px;
+  margin: 0 0 88px;
   max-width: 980px;
   font-size: 18px;
   opacity: .95;
@@ -258,7 +258,8 @@ body::before {
   .v-hero__badge,
   .v-title,
   .v-subtitle,
-  .v-article {
+  .v-article,
+  .v-article > * {
     opacity: 1;
     animation: none;
   }
@@ -275,6 +276,20 @@ body::before {
   max-width: 1040px;
   margin: 0 auto;
 }
+
+.v-article > * {
+  opacity: 0;
+  animation: v-fade-in-up .55s ease-out forwards;
+}
+
+.v-article > *:nth-child(1) { animation-delay: .35s; }
+.v-article > *:nth-child(2) { animation-delay: .45s; }
+.v-article > *:nth-child(3) { animation-delay: .55s; }
+.v-article > *:nth-child(4) { animation-delay: .65s; }
+.v-article > *:nth-child(5) { animation-delay: .75s; }
+.v-article > *:nth-child(6) { animation-delay: .85s; }
+.v-article > *:nth-child(7) { animation-delay: .95s; }
+.v-article > *:nth-child(n+8) { animation-delay: 1.05s; }
 
 .v-article__heading {
   margin: 0 0 18px;
