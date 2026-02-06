@@ -26,20 +26,8 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--v-text);
   min-height: 100%;
-  /* SFONDO */
-  background: url("https://www.davidefrigoli.it/wp-content/uploads/2026/02/teal-orange-black-white-glowing-color-gradient-bac-2026-01-06-09-50-52-utc-scaled.jpg") center top / cover no-repeat fixed;
-  background-color: #111;
+  background: #fff;
   position: relative;
-}
-
-/* overlay per contrasto */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, .38);
-  pointer-events: none;
-  z-index: 0;
 }
 
 .v-container {
@@ -53,11 +41,6 @@ body::before {
 }
 
 
-@media (max-width: 860px) {
-  body {
-    background-attachment: scroll;
-  }
-}
 /* HEADER */
 .v-header { position: sticky; top: 0; z-index: 50; }
 
@@ -201,7 +184,7 @@ body::before {
 .v-content { padding: 28px 0 64px; }
 
 /* HERO */
-.v-hero { margin: 18px 0 18px; color: #fff; }
+.v-hero { margin: 18px 0 18px; color: #111; }
 
 .v-hero__badge {
   display: inline-block;
@@ -210,23 +193,23 @@ body::before {
   letter-spacing: .3px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(230, 142, 37, .35), rgba(0, 0, 0, .15));
-  border: 1px solid rgba(255, 255, 255, .25);
+  background: #f3f3f3;
+  border: 1px solid rgba(0, 0, 0, .15);
+  color: #111;
 }
 
 .v-title {
   margin: 16px 0 18px;
   font-size: 42px;
   line-height: 1.05;
-  color: #ffd36d;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+  color: #111;
 }
 
 .v-subtitle {
   margin: 0 0 88px;
   max-width: 980px;
   font-size: 18px;
-  opacity: .95;
+  opacity: 1;
   line-height: 1.5;
 }
 
@@ -586,6 +569,5 @@ body::before {
   }
   .v-kpiTile__num { font-size: 38px; }
 }
-
 
 
