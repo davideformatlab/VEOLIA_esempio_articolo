@@ -30,6 +30,19 @@ body {
   position: relative;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url("https://www.davidefrigoli.it/wp-content/uploads/2026/02/grainy-noise-gradient-background-seamlessly-transi-2026-01-09-10-54-49-utc-scaled.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
+
 .v-container {
   width: min(var(--v-max), calc(100% - 48px));
   margin-inline: auto;
@@ -570,4 +583,3 @@ body {
   }
   .v-kpiTile__num { font-size: 38px; }
 }
-
