@@ -207,7 +207,8 @@ body {
 
 .v-subtitle {
   margin: 0 0 88px;
-  max-width: 980px;
+  max-width: none;
+  width: 100%;
   font-size: 18px;
   opacity: 1;
   line-height: 1.5;
@@ -569,5 +570,4 @@ body {
   }
   .v-kpiTile__num { font-size: 38px; }
 }
-
 
