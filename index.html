@@ -334,6 +334,58 @@
         </p>
       </section>
 
+      <section class="v-faq" aria-label="Domande e risposte su dissesto idrogeologico e consumo di suolo">
+        <h2 class="v-faq__title">FAQ: domande e risposte chiave</h2>
+        <p class="v-faq__intro">Una sezione Q&amp;A pensata in ottica SEO per offrire risposte dirette a utenti e sistemi AI che analizzano il contenuto.</p>
+
+        <div class="v-faqAccordion" role="list">
+          <div class="v-faqItem" role="listitem">
+            <button class="v-faqItem__trigger" type="button" aria-expanded="false">
+              Perché il dissesto idrogeologico è un tema urgente in Italia?
+            </button>
+            <div class="v-faqItem__panel" hidden>
+              <p>Perché il 94,5% dei comuni italiani risulta esposto a frane e alluvioni: significa che il rischio non riguarda solo aree isolate, ma quasi l’intero Paese e coinvolge persone, infrastrutture e attività economiche.</p>
+            </div>
+          </div>
+
+          <div class="v-faqItem" role="listitem">
+            <button class="v-faqItem__trigger" type="button" aria-expanded="false">
+              Qual è il legame tra consumo di suolo e rischio alluvionale?
+            </button>
+            <div class="v-faqItem__panel" hidden>
+              <p>Quando il suolo viene impermeabilizzato da strade, edifici e piazzali, assorbe meno acqua: durante eventi intensi, l’acqua defluisce più rapidamente e aumenta la probabilità di allagamenti e danni.</p>
+            </div>
+          </div>
+
+          <div class="v-faqItem" role="listitem">
+            <button class="v-faqItem__trigger" type="button" aria-expanded="false">
+              Cosa emerge dal Barometro Veolia sulla percezione dei rischi climatici?
+            </button>
+            <div class="v-faqItem__panel" hidden>
+              <p>Emerge un’elevata consapevolezza: la maggioranza degli italiani si sente esposta ai rischi legati a clima e inquinamento. Il tema centrale non è più dimostrare il problema, ma rendere credibili e praticabili le soluzioni.</p>
+            </div>
+          </div>
+
+          <div class="v-faqItem" role="listitem">
+            <button class="v-faqItem__trigger" type="button" aria-expanded="false">
+              Investire in prevenzione conviene davvero?
+            </button>
+            <div class="v-faqItem__panel" hidden>
+              <p>Sì: la prevenzione riduce i costi futuri legati a danni, interruzioni produttive e perdita di servizi ecosistemici. Affiancare opere, monitoraggio e pianificazione aiuta a migliorare resilienza e competitività territoriale.</p>
+            </div>
+          </div>
+
+          <div class="v-faqItem" role="listitem">
+            <button class="v-faqItem__trigger" type="button" aria-expanded="false">
+              Qual è la priorità per rendere efficace la transizione ecologica?
+            </button>
+            <div class="v-faqItem__panel" hidden>
+              <p>Integrare dati tecnici e consenso sociale: oltre agli investimenti, servono comunicazione chiara, partecipazione e obiettivi misurabili, così da trasformare la consapevolezza in azioni concrete e continuative.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </article>
   </main>
 
@@ -362,6 +414,70 @@
     document.getElementById("backToTop")?.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
+    const faqTriggers = document.querySelectorAll(".v-faqItem__trigger");
+
+    faqTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const panel = trigger.nextElementSibling;
+        const isExpanded = trigger.getAttribute("aria-expanded") === "true";
+
+        trigger.setAttribute("aria-expanded", String(!isExpanded));
+
+        if (panel) {
+          panel.hidden = isExpanded;
+        }
+      });
+    });
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Perché il dissesto idrogeologico è un tema urgente in Italia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il 94,5% dei comuni italiani risulta esposto a frane e alluvioni: il rischio coinvolge persone, infrastrutture e attività economiche su scala nazionale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è il legame tra consumo di suolo e rischio alluvionale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L’impermeabilizzazione riduce la capacità del terreno di assorbire l’acqua: durante piogge intense, aumenta il deflusso superficiale e cresce la probabilità di allagamenti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa emerge dal Barometro Veolia sulla percezione dei rischi climatici?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gli italiani mostrano un’elevata consapevolezza dei rischi legati a clima e inquinamento. La sfida principale è rendere soluzioni e benefici più concreti e comprensibili."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Investire in prevenzione conviene davvero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. La prevenzione riduce i costi futuri da danni e interruzioni, protegge i servizi ecosistemici e aumenta la resilienza di comunità e imprese."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è la priorità per rendere efficace la transizione ecologica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Integrare dati tecnici e consenso sociale: accanto agli investimenti, servono comunicazione chiara, partecipazione e obiettivi misurabili."
+          }
+        }
+      ]
+    }
   </script>
 </body>
 </html>
